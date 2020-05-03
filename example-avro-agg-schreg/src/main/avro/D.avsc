@@ -1,0 +1,8 @@
+{
+   "type" : "record",
+   "namespace" : "com.example.schreg",
+   "name" : "D",
+   "fields" : [
+     { "name" : "d1" , "type" : "com.example.schreg.B"    }
+   ]
+}

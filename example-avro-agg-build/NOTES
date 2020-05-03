@@ -1,0 +1,20 @@
+
+
+Exact post on SO:
+https://stackoverflow.com/questions/3496035/maven-include-file-contents-from-one-module-in-another
+
+ALT1 - maven-shade-plugin
+
+http://maven.apache.org/plugins/maven-shade-plugin/examples/resource-transformers.html#XmlAppendingTransformer
+
+ALT2 - call template engine
+how to deploy engine ?
+
+ALT3 velocity-maven-plugin
+https://mvnrepository.com/artifact/com.github.vdubus/velocity-maven-plugin/1.1.3
+
+
+References
+maven velocity : https://github.com/vdubus/velocity-maven-plugin
+maven order: https://stackoverflow.com/questions/13126440/multiple-maven-generate-sources
+avro setup : https://avro.apache.org/docs/current/gettingstartedjava.html

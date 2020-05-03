@@ -1,0 +1,10 @@
+{
+   "type" : "record",
+   "namespace" : "com.example",
+   "name" : "D",
+   "fields" : [
+     { "name" : "d1" , "type" :
+           #parse("src/main/resources/B.avsc.vm")
+     }
+   ]
+}

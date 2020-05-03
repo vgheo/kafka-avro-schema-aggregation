@@ -1,0 +1,21 @@
+
+
+1. determine if schema registry supports aggregated avro schema
+
+Schema registry supports schema references starting with version 5.5.0
+
+A work-around that consists of generating composite avro schemas
+before upload to registry is implemented in schema-registry mvn plugin v5.3.x
+
+ https://github.com/confluentinc/schema-registry/pull/855
+
+2. assuming schema aggregation not supported - solution based on build-time aggregation
+
+Solution: Use velocity to include the schema of a field at the location of
+the field definition in the dependent schema.
+Processing is performed at build time ( generate-sources phase), before avro schema generation.
+
+PoC : example-avro-agg-build
+
+
+

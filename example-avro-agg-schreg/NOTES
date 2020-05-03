@@ -1,0 +1,51 @@
+
+# related issues
+https://github.com/confluentinc/schema-registry/issues?q=reference
+
+Sub Schema referencing support?
+    https://github.com/confluentinc/schema-registry/issues/1232
+
+Documentation for schema subjet reference #1361
+Add support for schema pluggability and schema references  #1280
+- main feature PR
+
+https://github.com/confluentinc/schema-registry/issues?q=composition
+mvn plugin - allow schemas composition #854
+
+
+# Schema Registry - support for schema references
+Reference schema from other subject  #426
+https://github.com/confluentinc/schema-registry/issues/426
+fix :https://github.com/confluentinc/schema-registry/pull/1280
+
+commited in c19da74f7c4326438dd96d022a7e3d38dd3c68af
+    - branch master, 5.5.x
+
+First Release: v5.5.0
+
+
+## analysis
+
+v5.4.0
+https://github.com/confluentinc/schema-registry/blob/v5.4.0/core/src/main/java/io/confluent/kafka/schemaregistry/rest/resources/SubjectVersionsResource.java
+- no
+https://github.com/confluentinc/schema-registry/blob/v5.4.0/client/src/main/java/io/confluent/kafka/schemaregistry/client/rest/entities/requests/RegisterSchemaRequest.java
+
+v5.4.1
+- no support
+https://github.com/confluentinc/schema-registry/blob/v5.4.1/client/src/main/java/io/confluent/kafka/schemaregistry/client/rest/entities/requests/RegisterSchemaRequest.java
+
+v5.5.0
+https://github.com/confluentinc/schema-registry/blob/v5.5.0/client/src/main/java/io/confluent/kafka/schemaregistry/client/rest/entities/requests/RegisterSchemaRequest.java
+https://github.com/confluentinc/schema-registry/blob/v5.5.0/core/src/main/java/io/confluent/kafka/schemaregistry/rest/resources/SubjectVersionsResource.java
+- support for schema reference in register()
+
+# Schema composition
+- apparently some references support did exist in earlier versions
+* https://github.com/confluentinc/schema-registry/pull/855
+    2018-08
+
+""My idea is to use the dependencies to generate a complete schema that will then be pushed to schema registry. "
+"
+Note: This composes schemas inside the maven plugin - before upload
+We could as well compose schemas by other means... ( eg template include )
