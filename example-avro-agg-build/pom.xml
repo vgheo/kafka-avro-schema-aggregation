@@ -52,9 +52,6 @@
                                     <include>**/*.vm</include>
                                 </includes>
                             </templateFiles>
-                            <templateValues>
-                                <baseDir>${project.basedir}</baseDir>
-                            </templateValues>
                         </configuration>
                     </execution>
                 </executions>
