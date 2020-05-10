@@ -9,6 +9,13 @@ before upload to registry is implemented in schema-registry mvn plugin v5.3.x
 
  https://github.com/confluentinc/schema-registry/pull/855
 
+
+https://stackoverflow.com/questions/40854529/nesting-avro-schemas
+- post suggesting that schema-registry supports references between schemas if those are registered with a single
+union type
+
+
+
 2. assuming schema aggregation not supported - solution based on build-time aggregation
 
 Solution: Use velocity to include the schema of a field at the location of
@@ -18,4 +25,6 @@ Processing is performed at build time ( generate-sources phase), before avro sch
 PoC : example-avro-agg-build
 
 
+https://groups.google.com/forum/#!topic/confluent-platform/pey5-AS1NSE
+- post suggesting to aggregate schemas externally
 
